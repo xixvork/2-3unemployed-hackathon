@@ -1,0 +1,566 @@
+{
+    "effective_date": "2025-03-01",
+    "source": {
+        "name": "NYS Publication 718 (2/25) — Sales and Use Tax Rates by Jurisdiction",
+        "url": "https://www.tax.ny.gov/pdf/publications/sales/pub718.pdf"
+    },
+    "rates": {
+        "state_rate": 0.04,
+        "special_district_rates": {
+            "MCTD": 0.00375
+        }
+    },
+    "jurisdictions": [
+        {
+            "name": "Auburn (city)",
+            "type": "city",
+            "reporting_code": "0561",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Glens Falls (city)",
+            "type": "city",
+            "reporting_code": "5211",
+            "combined_rate": 0.07,
+            "mctd_included": false
+        },
+        {
+            "name": "Gloversville (city)",
+            "type": "city",
+            "reporting_code": "1741",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Ithaca (city)",
+            "type": "city",
+            "reporting_code": "5021",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Johnstown (city)",
+            "type": "city",
+            "reporting_code": "1751",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Mount Vernon (city)",
+            "type": "city",
+            "reporting_code": "5521",
+            "combined_rate": 0.08375,
+            "mctd_included": true
+        },
+        {
+            "name": "New Rochelle (city)",
+            "type": "city",
+            "reporting_code": "6861",
+            "combined_rate": 0.08375,
+            "mctd_included": true
+        },
+        {
+            "name": "New York City",
+            "type": "city",
+            "reporting_code": "8081",
+            "combined_rate": 0.08875,
+            "mctd_included": true
+        },
+        {
+            "name": "Norwich (city)",
+            "type": "city",
+            "reporting_code": "0831",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Ogdensburg (city)",
+            "type": "city",
+            "reporting_code": "4012",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Olean (city)",
+            "type": "city",
+            "reporting_code": "0441",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Oneida (city)",
+            "type": "city",
+            "reporting_code": "2541",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Oswego (city)",
+            "type": "city",
+            "reporting_code": "3561",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Rome (city)",
+            "type": "city",
+            "reporting_code": "3015",
+            "combined_rate": 0.0875,
+            "mctd_included": false
+        },
+        {
+            "name": "Salamanca (city)",
+            "type": "city",
+            "reporting_code": "0431",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Saratoga Springs (city)",
+            "type": "city",
+            "reporting_code": "4131",
+            "combined_rate": 0.07,
+            "mctd_included": false
+        },
+        {
+            "name": "Utica (city)",
+            "type": "city",
+            "reporting_code": "3018",
+            "combined_rate": 0.0875,
+            "mctd_included": false
+        },
+        {
+            "name": "White Plains (city)",
+            "type": "city",
+            "reporting_code": "6513",
+            "combined_rate": 0.08375,
+            "mctd_included": true
+        },
+        {
+            "name": "Yonkers (city)",
+            "type": "city",
+            "reporting_code": "6511",
+            "combined_rate": 0.08875,
+            "mctd_included": true
+        },
+        {
+            "name": "Albany",
+            "type": "county",
+            "reporting_code": "0181",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Allegany",
+            "type": "county",
+            "reporting_code": "0221",
+            "combined_rate": 0.085,
+            "mctd_included": false
+        },
+        {
+            "name": "Broome",
+            "type": "county",
+            "reporting_code": "0321",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Cattaraugus",
+            "type": "county",
+            "reporting_code": "0481",
+            "combined_rate": 0.08,
+            "mctd_included": false,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Cayuga",
+            "type": "county",
+            "reporting_code": "0511",
+            "combined_rate": 0.08,
+            "mctd_included": false,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Chautauqua",
+            "type": "county",
+            "reporting_code": "0651",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Chemung",
+            "type": "county",
+            "reporting_code": "0711",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Chenango",
+            "type": "county",
+            "reporting_code": "0861",
+            "combined_rate": 0.08,
+            "mctd_included": false,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Clinton",
+            "type": "county",
+            "reporting_code": "0921",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Columbia",
+            "type": "county",
+            "reporting_code": "1021",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Cortland",
+            "type": "county",
+            "reporting_code": "1131",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Delaware",
+            "type": "county",
+            "reporting_code": "1221",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Dutchess",
+            "type": "county",
+            "reporting_code": "1311",
+            "combined_rate": 0.08125,
+            "mctd_included": true
+        },
+        {
+            "name": "Erie",
+            "type": "county",
+            "reporting_code": "1451",
+            "combined_rate": 0.0875,
+            "mctd_included": false
+        },
+        {
+            "name": "Essex",
+            "type": "county",
+            "reporting_code": "1521",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Franklin",
+            "type": "county",
+            "reporting_code": "1621",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Fulton",
+            "type": "county",
+            "reporting_code": "1791",
+            "combined_rate": 0.08,
+            "mctd_included": false,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Genesee",
+            "type": "county",
+            "reporting_code": "1811",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Greene",
+            "type": "county",
+            "reporting_code": "1911",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Hamilton",
+            "type": "county",
+            "reporting_code": "2011",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Herkimer",
+            "type": "county",
+            "reporting_code": "2121",
+            "combined_rate": 0.0825,
+            "mctd_included": false
+        },
+        {
+            "name": "Jefferson",
+            "type": "county",
+            "reporting_code": "2221",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Lewis",
+            "type": "county",
+            "reporting_code": "2321",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Livingston",
+            "type": "county",
+            "reporting_code": "2411",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Madison",
+            "type": "county",
+            "reporting_code": "2511",
+            "combined_rate": 0.08,
+            "mctd_included": false,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Monroe",
+            "type": "county",
+            "reporting_code": "2611",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Montgomery",
+            "type": "county",
+            "reporting_code": "2781",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Nassau",
+            "type": "county",
+            "reporting_code": "2811",
+            "combined_rate": 0.08625,
+            "mctd_included": true
+        },
+        {
+            "name": "Niagara",
+            "type": "county",
+            "reporting_code": "2911",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Oneida",
+            "type": "county",
+            "reporting_code": "3010",
+            "combined_rate": 0.0875,
+            "mctd_included": false,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Onondaga",
+            "type": "county",
+            "reporting_code": "3121",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Ontario",
+            "type": "county",
+            "reporting_code": "3211",
+            "combined_rate": 0.075,
+            "mctd_included": false
+        },
+        {
+            "name": "Orange",
+            "type": "county",
+            "reporting_code": "3321",
+            "combined_rate": 0.08125,
+            "mctd_included": true
+        },
+        {
+            "name": "Orleans",
+            "type": "county",
+            "reporting_code": "3481",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Oswego",
+            "type": "county",
+            "reporting_code": "3501",
+            "combined_rate": 0.08,
+            "mctd_included": false,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Otsego",
+            "type": "county",
+            "reporting_code": "3621",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Putnam",
+            "type": "county",
+            "reporting_code": "3731",
+            "combined_rate": 0.08375,
+            "mctd_included": true
+        },
+        {
+            "name": "Rensselaer",
+            "type": "county",
+            "reporting_code": "3881",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Rockland",
+            "type": "county",
+            "reporting_code": "3921",
+            "combined_rate": 0.08375,
+            "mctd_included": true
+        },
+        {
+            "name": "St. Lawrence",
+            "type": "county",
+            "reporting_code": "4091",
+            "combined_rate": 0.08,
+            "mctd_included": false,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Saratoga",
+            "type": "county",
+            "reporting_code": "4111",
+            "combined_rate": 0.07,
+            "mctd_included": false,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Schenectady",
+            "type": "county",
+            "reporting_code": "4241",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Schoharie",
+            "type": "county",
+            "reporting_code": "4321",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Schuyler",
+            "type": "county",
+            "reporting_code": "4411",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Seneca",
+            "type": "county",
+            "reporting_code": "4511",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Steuben",
+            "type": "county",
+            "reporting_code": "4691",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Suffolk",
+            "type": "county",
+            "reporting_code": "4711",
+            "combined_rate": 0.0875,
+            "mctd_included": true
+        },
+        {
+            "name": "Sullivan",
+            "type": "county",
+            "reporting_code": "4821",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Tioga",
+            "type": "county",
+            "reporting_code": "4921",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Tompkins",
+            "type": "county",
+            "reporting_code": "5081",
+            "combined_rate": 0.08,
+            "mctd_included": false,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Ulster",
+            "type": "county",
+            "reporting_code": "5111",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Warren",
+            "type": "county",
+            "reporting_code": "5281",
+            "combined_rate": 0.07,
+            "mctd_included": false,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Washington",
+            "type": "county",
+            "reporting_code": "5311",
+            "combined_rate": 0.07,
+            "mctd_included": false
+        },
+        {
+            "name": "Wayne",
+            "type": "county",
+            "reporting_code": "5421",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Westchester",
+            "type": "county",
+            "reporting_code": "5581",
+            "combined_rate": 0.08375,
+            "mctd_included": true,
+            "scope": "except_listed_cities"
+        },
+        {
+            "name": "Wyoming",
+            "type": "county",
+            "reporting_code": "5621",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "Yates",
+            "type": "county",
+            "reporting_code": "5721",
+            "combined_rate": 0.08,
+            "mctd_included": false
+        },
+        {
+            "name": "New York State only",
+            "type": "state",
+            "reporting_code": "0021",
+            "combined_rate": 0.04,
+            "mctd_included": false
+        }
+    ]
+}
