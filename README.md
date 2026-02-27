@@ -20,18 +20,43 @@ Admin panel and backend skeleton for New York sales-tax calculation workflow.
 
 1. Install dependencies
    - `pnpm install`
-2. Run backend
+2. Start local PostgreSQL
+   - `pnpm db:up`
+3. Run backend
    - `pnpm dev:api`
-3. Run frontend
+4. Run frontend
    - `pnpm dev:web`
-4. Open frontend
+5. Open frontend
    - `http://localhost:5173`
+
+## Database (Task 1.3)
+
+Local PostgreSQL is used (no Docker required in current setup):
+
+- Service start: `pnpm db:up`
+- Service stop: `pnpm db:down`
+- Service status: `pnpm db:status`
+- Connection check: `pnpm db:check`
+
+Default local credentials:
+
+- host: `localhost`
+- port: `5432`
+- db: `hackathon`
+- user: `hackathon`
+- password: `hackathon`
 
 ## Environment
 
 Use `.env.example` as template:
 
 - `VITE_API_URL=http://localhost:3000`
+- `POSTGRES_HOST=localhost`
+- `POSTGRES_PORT=5432`
+- `POSTGRES_DB=hackathon`
+- `POSTGRES_USER=hackathon`
+- `POSTGRES_PASSWORD=hackathon`
+- `DATABASE_URL=postgres://hackathon:hackathon@localhost:5432/hackathon`
 
 ## Quality Checks
 
