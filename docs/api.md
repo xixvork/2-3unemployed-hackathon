@@ -50,6 +50,11 @@ This document defines and freezes the JSON contract for:
 
 Creates one order, computes tax immediately, persists the result.
 
+### Content Types
+
+- Request: `application/json`
+- Response: `application/json`
+
 ### Request Body
 
 ```json
@@ -100,9 +105,32 @@ Creates one order, computes tax immediately, persists the result.
 - `subtotal`: decimal string, `> 0`
 - `timestamp`: valid ISO-8601 datetime
 
+### Error Statuses (fixed)
+
+- `400 BAD_REQUEST`
+  - `error.code`: `BAD_JSON`
+  - case: malformed JSON body.
+- `415 UNSUPPORTED_MEDIA_TYPE`
+  - `error.code`: `UNSUPPORTED_CONTENT_TYPE`
+  - case: content type is not `application/json`.
+- `422 UNPROCESSABLE_ENTITY`
+  - `error.code`: `VALIDATION_ERROR`
+  - case: invalid fields or values.
+- `422 UNPROCESSABLE_ENTITY`
+  - `error.code`: `OUTSIDE_SERVICE_AREA`
+  - case: coordinates are outside New York State.
+- `500 INTERNAL_SERVER_ERROR`
+  - `error.code`: `INTERNAL_ERROR`
+  - case: unexpected server failure.
+
 ## GET /orders
 
 Returns paginated orders list with filters.
+
+### Content Types
+
+- Request: query params only
+- Response: `application/json`
 
 ### Query Params
 
@@ -157,16 +185,52 @@ Returns paginated orders list with filters.
 }
 ```
 
+### Error Statuses (fixed)
+
+- `400 BAD_REQUEST`
+  - `error.code`: `INVALID_QUERY`
+  - case: malformed query params (`page`, `pageSize`, date range, etc.).
+- `422 UNPROCESSABLE_ENTITY`
+  - `error.code`: `INVALID_FILTER_RANGE`
+  - case: semantic errors in filters (for example `minSubtotal > maxSubtotal`).
+- `500 INTERNAL_SERVER_ERROR`
+  - `error.code`: `INTERNAL_ERROR`
+  - case: unexpected server failure.
+
 ## POST /orders/import
 
 Imports orders from CSV and computes taxes for each valid row.
 
 ### Request Format
 
-`multipart/form-data` with field:
+Content types:
+- Request: `multipart/form-data`
+- Response: `application/json`
+
+Form fields:
 - `file`: CSV file (required)
 
 Note: this endpoint does not accept a JSON request body by design, because task requirement is CSV import.
+
+### CSV Input Contract (fixed)
+
+- Encoding: `UTF-8`
+- Delimiter: comma (`,`)
+- Quote char: double quote (`"`)
+- Header row: required
+- Allowed headers (exact, in this order):
+  - `latitude`
+  - `longitude`
+  - `subtotal`
+  - `timestamp`
+- Required columns: all 4
+- Empty values: not allowed for any required column
+- `latitude`: number, range `-90..90`
+- `longitude`: number, range `-180..180`
+- `subtotal`: decimal string, `> 0`
+- `timestamp`: ISO-8601 datetime (UTC recommended)
+- Extra columns: ignored
+- Unknown/missing headers: rejected
 
 ### Success Response
 
@@ -189,6 +253,27 @@ Note: this endpoint does not accept a JSON request body by design, because task 
 }
 ```
 
+### Error Statuses (fixed)
+
+- `400 BAD_REQUEST`
+  - `error.code`: `MISSING_FILE`
+  - case: no `file` provided in form-data.
+- `400 BAD_REQUEST`
+  - `error.code`: `EMPTY_FILE`
+  - case: uploaded file is empty.
+- `415 UNSUPPORTED_MEDIA_TYPE`
+  - `error.code`: `UNSUPPORTED_CONTENT_TYPE`
+  - case: request is not `multipart/form-data`.
+- `422 UNPROCESSABLE_ENTITY`
+  - `error.code`: `INVALID_CSV_HEADERS`
+  - case: missing/unknown CSV headers or wrong header format.
+- `422 UNPROCESSABLE_ENTITY`
+  - `error.code`: `CSV_ROW_VALIDATION_ERROR`
+  - case: at least one row contains invalid value(s).
+- `500 INTERNAL_SERVER_ERROR`
+  - `error.code`: `INTERNAL_ERROR`
+  - case: unexpected server failure.
+
 ## Error Contract (all endpoints)
 
 ### Error Response
@@ -208,10 +293,26 @@ Note: this endpoint does not accept a JSON request body by design, because task 
 }
 ```
 
-### Recommended Status Codes
+### Error Object Rules
 
-- `400 Bad Request`: malformed query/body
-- `404 Not Found`: resource missing (if applicable)
-- `409 Conflict`: duplicates/import conflicts (if applicable)
-- `422 Unprocessable Entity`: semantic validation errors
-- `500 Internal Server Error`: unexpected failures
+- `error.code`: machine-readable, stable string enum from endpoint status rules above.
+- `error.message`: short human-readable message.
+- `error.details`: optional array for field/row-level problems.
+
+CSV row-level error example:
+
+```json
+{
+  "error": {
+    "code": "CSV_ROW_VALIDATION_ERROR",
+    "message": "CSV contains invalid rows",
+    "details": [
+      {
+        "row": 12,
+        "field": "timestamp",
+        "issue": "must be valid ISO-8601 datetime"
+      }
+    ]
+  }
+}
+```
