@@ -42,6 +42,8 @@ Use `.env.example` as template:
 
 - API contract (Task 1.4): `docs/api.md`
 - Decisions log: `docs/decisions.md`
+- Assumptions log: `docs/assumptions.md`
+- Conclusions: `docs/conclusions.md`
 
 ## Notes
 
