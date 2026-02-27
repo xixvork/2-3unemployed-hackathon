@@ -38,6 +38,11 @@ Use `.env.example` as template:
 - `pnpm typecheck`
 - `pnpm lint`
 
+## Docs
+
+- API contract (Task 1.4): `docs/api.md`
+- Decisions log: `docs/decisions.md`
+
 ## Notes
 
 - Coordinates are expected to be within New York State (checked in manual create UI as guardrail).
