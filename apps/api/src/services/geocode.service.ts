@@ -4,5 +4,6 @@ export type Coordinates = {
 };
 
 export const resolveJurisdictions = (_coordinates: Coordinates): string[] => {
+  void _coordinates;
   throw new Error("Not implemented: jurisdiction resolver");
 };
