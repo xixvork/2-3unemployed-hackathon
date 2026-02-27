@@ -1,2 +1,12 @@
-
 .DS_Store
+node_modules
+dist
+.env
+.env.local
+
+# local helper artifacts
+.qlout/
+.render_pdf_pages
+.render_pdf_pages.m
+WEB_Dev_TestTask.page-*.png
+WEB_Dev_TestTask.pdf.png

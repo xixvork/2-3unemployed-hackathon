@@ -1,0 +1,11 @@
+CREATE TABLE IF NOT EXISTS orders (
+  id BIGSERIAL PRIMARY KEY,
+  latitude DOUBLE PRECISION NOT NULL,
+  longitude DOUBLE PRECISION NOT NULL,
+  subtotal NUMERIC(12, 2) NOT NULL,
+  timestamp TIMESTAMPTZ NOT NULL,
+  composite_tax_rate NUMERIC(8, 5) NOT NULL,
+  tax_amount NUMERIC(12, 2) NOT NULL,
+  total_amount NUMERIC(12, 2) NOT NULL,
+  created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+);
